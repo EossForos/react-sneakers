@@ -3,6 +3,31 @@ import React from 'react'
 function App() {
     return (
         <div className="wrapper clear">
+            <div className="overlay">
+                <div className="drawer">
+                    <h2 className="mb-30">Корзина</h2>
+
+                    <div className="cartItem d-flex align-center mb-20">
+                        <div style={{ backgroundImage: 'url(/img/sneakers/1.jpg)'}} className="cartItemImg"></div>
+                        <div className="mr-20 flex">
+                            <p className="mb-5">Мужские Кроссовки Nike Blazer Mid Suede</p>
+                            <b>12 999 руб.</b>
+                        </div>
+                        <img className="removeBtn" src="/img/btn-remove.svg" alt="Remove Cart Icon"/>
+                    </div>
+
+                    <div className="cartItem d-flex align-center mb-20">
+                        <div style={{ backgroundImage: 'url(/img/sneakers/1.jpg)'}} className="cartItemImg"></div>
+                        <div className="mr-20 flex">
+                            <p className="mb-5">Мужские Кроссовки Nike Blazer Mid Suede</p>
+                            <b>12 999 руб.</b>
+                        </div>
+                        <img className="removeBtn" src="/img/btn-remove.svg" alt="Remove Cart Icon"/>
+                    </div>
+
+                </div>
+            </div>
+
             <header className="d-flex justify-between align-center p-40">
                 <div className="d-flex align-center">
                     <img width={40} height={40} src="/img/logo.png" alt="Logo Icon"/>
@@ -22,9 +47,18 @@ function App() {
                 </ul>
             </header>
             <div className="content p-40">
-                <h1 className='mb-40'>Все кроссовки</h1>
+                <div className=" mb-40 d-flex justify-between align-center">
+                    <h1>Все кроссовки</h1>
+                    <div className="search-block d-flex">
+                        <img src="/img/search.svg" alt="Search Icon"/>
+                        <input placeholder="Поиск..." type="text"/>
+                    </div>
+                </div>
                 <div className="d-flex">
                     <div className="card">
+                        <div className="favorite">
+                            <img src="/img/unliked.svg" alt="Heart Unliked Icon"/>
+                        </div>
                         <img width={133} height={112} src="/img/sneakers/1.jpg" alt="Sneakers Icon"/>
                         <h5>Мужские Кроссовки Nike Blazer Mid Suede</h5>
                         <div className="d-flex justify-between align-center">

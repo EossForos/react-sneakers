@@ -54,15 +54,15 @@
   b {
     font-size: 14px;
   }
+}
 
-  .removeBtn {
-    cursor: pointer;
-    opacity: 0.5;
-    transition: opacity 0.15s ease-in-out;
+.removeBtn {
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 0.15s ease-in-out;
 
-    &:hover {
-      opacity: 1;
-    }
+  &:hover {
+    opacity: 1;
   }
 }
 

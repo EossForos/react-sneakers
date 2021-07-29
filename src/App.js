@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react'
+import axios from "axios";
 
 import {Card, Header, Drawer} from "./components";
 
@@ -10,15 +11,22 @@ function App() {
     const [cartOpened, setCartOpened] = useState(false)
 
     useEffect(() => {
-        fetch('https://6100179cbca46600171cf716.mockapi.io/items').then(res => {
-            return res.json()
-        }).then(json => {
-            setItems(json)
+        axios.get('https://6100179cbca46600171cf716.mockapi.io/items').then(res => {
+            setItems(res.data)
+        })
+        axios.get('https://6100179cbca46600171cf716.mockapi.io/cart').then(res => {
+            setCartItems(res.data)
         })
     }, [])
 
     const onAddToCart = (obj) => {
-        setCartItems(prev => [...prev, obj])
+        axios.post('https://6100179cbca46600171cf716.mockapi.io/cart', obj)
+        setCartItems((prev) => [...prev, obj])
+    }
+
+    const onRemoveItem = (id) => {
+        axios.delete(`https://6100179cbca46600171cf716.mockapi.io/cart/${id}`)
+        setCartItems((prev) => prev.filter(item => item.id !== id))
     }
 
     const onChangeSearchInput = (event) => {
@@ -27,7 +35,7 @@ function App() {
 
     return (
         <div className="wrapper clear">
-            {cartOpened && <Drawer items={cartItems} onClose={() => setCartOpened(false)}/>}
+            {cartOpened && <Drawer items={cartItems} onClose={() => setCartOpened(false)} onRemove={onRemoveItem}/>}
             <Header onClickCart={() => setCartOpened(true)} />
             <div className="content p-40">
                 <div className=" mb-40 d-flex justify-between align-center">
@@ -46,7 +54,7 @@ function App() {
                     </div>
                 </div>
                 <div className="d-flex flex-wrap">
-                    {items.map((item, index) => (
+                    {items.filter(item => item.title.toLowerCase().includes(searchValue.toLowerCase())).map((item, index) => (
                         <Card
                             key={index}
                             title={item.title}

@@ -1,0 +1,91 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "title": "Мужские Кроссовки Nike Blazer Mid Suede",
+      "price": 12999,
+      "imageUrl": "/img/sneakers/1.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Мужские Кроссовки Nike Run Forest Run",
+      "price": 8872,
+      "imageUrl": "/img/sneakers/2.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Мужские Кроссовки Nike Bezz Fits",
+      "price": 1234,
+      "imageUrl": "/img/sneakers/3.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Мужские Кроссовки Nike Rainbow Fox",
+      "price": 4321,
+      "imageUrl": "/img/sneakers/4.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Мужские Кроссовки Adidas Rising Sun",
+      "price": 4567,
+      "imageUrl": "/img/sneakers/5.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Мужские Кроссовки Scetchers Bufallo",
+      "price": 7654,
+      "imageUrl": "/img/sneakers/6.jpg"
+    },
+    {
+      "id": 7,
+      "title": "Мужские Кроссовки Soul Call Bee Cool",
+      "price": 9876,
+      "imageUrl": "/img/sneakers/7.jpg"
+    },
+    {
+      "id": 8,
+      "title": "Мужские Кроссовки Puma Breez",
+      "price": 6789,
+      "imageUrl": "/img/sneakers/8.jpg"
+    },
+    {
+      "id": 9,
+      "title": "Мужские Кроссовки Old Man",
+      "price": 5678,
+      "imageUrl": "/img/sneakers/9.jpg"
+    },
+    {
+      "id": 10,
+      "title": "Мужские Кроссовки Nike Grass",
+      "price": 8765,
+      "imageUrl": "/img/sneakers/10.jpg"
+    }
+  ],
+  "cart": [
+    {
+      "title": "Мужские Кроссовки Nike Rainbow Fox",
+      "price": 4321,
+      "imageUrl": "/img/sneakers/4.jpg",
+      "id": 1
+    },
+    {
+      "title": "Мужские Кроссовки Nike Bezz Fits",
+      "price": 1234,
+      "imageUrl": "/img/sneakers/3.jpg",
+      "id": 2
+    },
+    {
+      "title": "Мужские Кроссовки Nike Bezz Fits",
+      "price": 1234,
+      "imageUrl": "/img/sneakers/3.jpg",
+      "id": 3
+    },
+    {
+      "title": "Мужские Кроссовки Nike Rainbow Fox",
+      "price": 4321,
+      "imageUrl": "/img/sneakers/4.jpg",
+      "id": 4
+    }
+  ],
+  "favorites": []
+}
